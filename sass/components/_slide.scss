@@ -1,0 +1,116 @@
+@use '../base/reset';
+@use '../utils/variables';
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: 1fr 3rem;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+// GRID SLIDE
+
+.swiper-slide {
+  grid-area: 1 / 1 / 2 / 4;
+
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.swiper-button-prev {
+  grid-area: 2 / 1 / 3 / 2;
+  position: relative;
+  align-self: start;
+  justify-self: end;
+  top: 60%;
+
+  &::after {
+    padding-right: 3px;
+  }
+}
+
+.swiper-button-next {
+  grid-area: 2 / 3 / 3 / 4;
+  position: relative;
+  align-self: start;
+  justify-self: start;
+  top: 60%;
+
+  &::after {
+    padding-left: 3px;
+  }
+}
+
+.swiper-pagination {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+// ESTILO BOTON PREV Y NEXT 
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: variables.$color-light;
+  background-color: variables.$color-primary;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+
+  &::after {
+    font-size: variables.$font-size-small;
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: variables.$color-secondary;
+  }
+}
+
+// PAGINACIÓN TIPO BULLET 
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: variables.$color-primary;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// PAGINACIÓN TIPO FRACCIÓN 
+
+.swiper-pagination-fraction {
+  font-weight: 300;
+}
+
+
+// PAGINACIÓN TIPO BARRA DE PROGRESO 
+
+.swiper-container-horizontal > .swiper-pagination-progressbar, .swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+	width: 100%;
+	height: 4px;
+	left: 0;
+	top: 45%;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+	background: var(--swiper-pagination-color, variables.$color-primary);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(0);
+	transform-origin: left top;
+}

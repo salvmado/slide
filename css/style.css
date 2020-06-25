@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: calc(.9rem + .25vw);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: 1fr 3rem;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.swiper-slide {
+  grid-area: 1/1/2/4;
+}
+.swiper-slide > img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev {
+  grid-area: 2/1/3/2;
+  position: relative;
+  align-self: start;
+  justify-self: end;
+  top: 60%;
+}
+.swiper-button-prev::after {
+  padding-right: 3px;
+}
+
+.swiper-button-next {
+  grid-area: 2/3/3/4;
+  position: relative;
+  align-self: start;
+  justify-self: start;
+  top: 60%;
+}
+.swiper-button-next::after {
+  padding-left: 3px;
+}
+
+.swiper-pagination {
+  grid-area: 2/2/3/3;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #F0F0F0;
+  background-color: #439539;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: calc(0.7rem + .25vw);
+  font-weight: 700;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #A0D244;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #439539;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-pagination-fraction {
+  font-weight: 300;
+}
+
+.swiper-container-horizontal > .swiper-pagination-progressbar, .swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  width: 100%;
+  height: 4px;
+  left: 0;
+  top: 45%;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--swiper-pagination-color, #439539);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transform-origin: left top;
+}
+
+/*# sourceMappingURL=style.css.map */

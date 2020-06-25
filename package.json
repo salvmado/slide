@@ -1,0 +1,22 @@
+{
+  "name": "slide",
+  "version": "1.0.0",
+  "description": "Slides utilizando el plugin swiper",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "browserslist": "last 4 versions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salvmado/slide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salvmado/slide/issues"
+  },
+  "homepage": "https://github.com/salvmado/slide#readme"
+}
