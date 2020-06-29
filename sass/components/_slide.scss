@@ -16,11 +16,6 @@
 
 .swiper-slide {
   grid-area: 1 / 1 / 2 / 4;
-
-  > img {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .swiper-button-prev {
@@ -55,8 +50,9 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: variables.$color-light;
-  background-color: variables.$color-primary;
+  color: variables.$color-primary;
+  background-color: variables.$color-light;
+  // border: 1px solid variables.$color-dark;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -68,6 +64,7 @@
 
   &:hover {
     background-color: variables.$color-secondary;
+    color: variables.$color-light;
   }
 }
 

@@ -1,0 +1,87 @@
+@use '../utils/variables';
+@use '../utils/mixins' as *;
+
+.numero {
+  font-size: variables.$font-size-xx-large;
+  font-weight: 900;
+  color: variables.$color-primary;
+  opacity: .15;
+}
+
+h1, h2 {
+  font-size: variables.$font-size-medium;
+  font-weight: 700;
+  color: variables.$color-dark;
+
+  @include medium-screen {
+    font-size: variables.$font-size-large;
+    font-weight: 700;
+    color: variables.$color-dark;
+  }
+
+  @include large-screen {
+    font-size: variables.$font-size-x-large;
+    font-weight: 700;
+    color: variables.$color-dark;
+  }
+}
+
+h3 {
+  font-size: variables.$font-size-medium;
+  font-weight: 700;
+  color: variables.$color-dark;
+}
+
+h4 {
+  font-size: variables.$font-size;
+  font-weight: 700;
+  color: variables.$color-dark;
+}
+
+p,
+ul, 
+li {
+  font-size: variables.$font-size;
+  font-weight: 400;
+  line-height: 1.5;
+  color: variables.$color-dark;
+}
+
+.nav__link {
+  font-size: variables.$font-size;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  color: variables.$color-dark;
+
+  @include medium-screen {
+    font-size: variables.$font-size-medium;
+    color: variables.$color-dark;
+  }
+
+  @include large-screen {
+    font-size: variables.$font-size-small;
+    color: variables.$color-dark;
+  }
+}
+
+.footer__nav--link {
+  font-size: variables.$font-size-small;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 400;
+  color: variables.$color-dark;
+}
+
+span {
+  font-weight: 300;
+  color: variables.$color-dark;
+}
+
+small {
+  font-size: variables.$font-size-xx-small;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: variables.$color-dark;
+}
